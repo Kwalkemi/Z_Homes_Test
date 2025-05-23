@@ -1,4 +1,4 @@
-﻿using Z_Homes_Test.Business;
+﻿using Microsoft.EntityFrameworkCore;
 using Z_Homes_Test.Business;
 using Z_Homes_Test.Entities;
 using Z_Homes_Test.Models;
@@ -53,7 +53,7 @@ namespace Z_Homes_Test.Service
 
 
             dbContext.Employees.Add(employee);
-            //dbContext.Entry(employee).State = System.Data.Entity.EntityState.Modified;
+            dbContext.Entry(employee).State = EntityState.Modified;
             dbContext.SaveChanges();
 
             Employee employees = dbContext.Employees.Where(x => x.EmployeeId == employee.EmployeeId).FirstOrDefault();

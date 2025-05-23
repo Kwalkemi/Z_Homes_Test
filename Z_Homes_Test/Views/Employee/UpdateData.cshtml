@@ -5,6 +5,7 @@
 
 @using (Html.BeginForm("UpdateData", "Employee", FormMethod.Post))
 {
+    @Html.HiddenFor(x => x.EmployeeId)
 <div class="row">
     <div class="col-4">
     </div>

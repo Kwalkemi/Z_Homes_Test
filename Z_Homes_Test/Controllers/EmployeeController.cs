@@ -49,7 +49,7 @@ namespace Z_Homes_Test.Controllers
         {
             EmployeeViewModel employeeViewModel = _employeeService.GetEmployeeById(Id);
             _employeeService.DeleteEmployee(employeeViewModel);
-            return View();
+            return RedirectToAction("GetData");
         }
     }
 }
